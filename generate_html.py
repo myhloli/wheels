@@ -59,6 +59,9 @@ for package in packages:
     # 渲染子页面HTML模板
     subpage_content = subpage_template.render(whl_files=whl_files, base_url=f"{base_url}{package}/")
 
+    # 创建子目录（如果不存在）
+    os.makedirs(package, exist_ok=True)
+
     # 写入子页面HTML文件
     with open(f'{package}/index.html', 'w') as file:
         file.write(subpage_content)
