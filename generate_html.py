@@ -26,7 +26,7 @@ directory_path = 'assets/whl'
 whl_files = [f for f in os.listdir(directory_path) if f.endswith('.whl')]
 
 # 基础URL，这里假设是你的GitHub Pages的URL
-base_url = 'https://raw.githubusercontent.com/myhloli/wheels/main/assets/whl'
+base_url = 'https://raw.githubusercontent.com/myhloli/wheels/main/assets/whl/'
 
 # 渲染HTML模板
 html_content = template.render(whl_files=whl_files, base_url=base_url)
