@@ -42,10 +42,12 @@ directory_path = 'assets/whl'
 packages = next(os.walk(directory_path))[1]
 
 # 基础URL，这里假设是你的GitHub Pages的URL
-base_url = 'https://raw.githubusercontent.com/myhloli/wheels/main/assets/whl/'
+base_url = 'https://raw.githubusercontent.com/myhloli/wheels/main/assets/whl'
+
+index_base_url = 'https://myhloli.github.io/wheels/'
 
 # 渲染顶级HTML模板
-html_content = template.render(packages=packages, base_url=base_url)
+html_content = template.render(packages=packages, base_url=index_base_url)
 
 # 写入顶级HTML文件
 with open('index.html', 'w') as file:
@@ -57,7 +59,7 @@ for package in packages:
     whl_files = [f for f in os.listdir(subdirectory_path) if f.endswith('.whl')]
 
     # 渲染子页面HTML模板
-    subpage_content = subpage_template.render(whl_files=whl_files, base_url=f"{base_url}{package}/")
+    subpage_content = subpage_template.render(whl_files=whl_files, base_url=f"{base_url}/{package}/")
 
     # 创建子目录（如果不存在）
     os.makedirs(package, exist_ok=True)
