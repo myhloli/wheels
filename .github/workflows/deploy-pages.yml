@@ -30,7 +30,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.RELEASE_TOKEN }}
         publish_dir: ./ # 这里是你的HTML文件所在的目录
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        user_name: 'myhloli'
+        user_email: 'moe@myhloli.com'
