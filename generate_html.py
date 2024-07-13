@@ -7,6 +7,15 @@ template_str = """
 <html>
 <head>
 <meta name="pypi:repository-version" content="1.1">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15d27875695f5ffb9252818426884ce8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
 {% for package in packages %}
@@ -22,6 +31,15 @@ subpage_template_str = """
 <html>
 <head>
 <meta name="pypi:repository-version" content="1.1">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15d27875695f5ffb9252818426884ce8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
 {% for whl_file in whl_files %}
