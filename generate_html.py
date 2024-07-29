@@ -60,9 +60,12 @@ directory_path = 'assets/whl'
 packages = next(os.walk(directory_path))[1]
 
 # 基础URL，这里假设是你的GitHub Pages的URL
-base_url = 'https://raw.githubusercontent.com/myhloli/wheels/main/assets/whl'
+# base_url = 'https://raw.githubusercontent.com/myhloli/wheels/main/assets/whl'
 
 # base_url = 'https://gitee.com/myhloli/wheels/raw/main/assets/whl' # 外站引用会403
+
+# 腾讯云cos
+base_url = 'https://wheels-1251341229.cos.ap-shanghai.myqcloud.com/assets/whl'
 
 index_base_url = 'https://myhloli.github.io/wheels/'
 
